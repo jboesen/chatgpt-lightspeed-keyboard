@@ -1,0 +1,123 @@
+.container {
+  width: 350px;
+  background-color: #f4f4f4; /* Soft background color */
+  color: #314d3e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  padding: 5px; /* Padding for space */
+}
+
+.title {
+  font-size: 16px; /* Increased font size */
+  font-weight: bold;
+  color: #526760; /* Softer color */
+  padding: 8px;
+  text-align: center; /* Center alignment for focus */
+}
+
+.textbox {
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+  padding: 4px 2px;
+  border: 1px solid #d0d0d0; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.textbox:focus {
+  outline: 0;
+  border-color: #66afe9;
+}
+
+.bookmarks {
+  margin: 10px 5px 0px 5px; /* Increased margin */
+  padding: 5px; /* Increased padding */
+}
+
+.bookmark {
+/*   display: flex; */
+  border-bottom-color: #c0c0c0; /* Softer border color */
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-radius: 0.4rem;
+  padding: 6px;
+  margin-bottom: 10px; 
+    gap: 8px; 
+}
+
+.bookmark-title {
+  padding-left: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bookmark-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kb-shortcut {
+/*   display: flex; */
+/*   justify-self: flex-end; */
+/*     text-align: right;
+  align-self: flex-end; */
+    font-size: 12px; 
+    min-width: 100px;
+    margin: 3px;
+
+  font-family: 'Courier New', monospace; 
+}
+
+.bookmark-controls img {
+  margin: 0 4px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  opacity: 0.8;
+  font-family: 'Courier New', monospace;
+}
+
+.bookmark-controls {
+  flex: auto;
+  text-align: right;
+  font-style: italic;
+}
+
+.bmc-btn {
+  background-color: #5F7FFF !important;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline from link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5%;
+}
+
+.bmc-btn-container {
+  display: flex; /* Use flexbox for container */
+  justify-content: center; /* Center button horizontally */
+  align-items: center; /* Center button vertically */
+  height: 100px; /* Set a fixed height for the container */
+  width: 100%; /* Set container width to full */
+}
+
+.bmc-btn-text {
+  font-size: calc(10px + 1vw); /* Auto-adjust font size */
+}
+
+.bmc-btn img {
+  padding: 5px;
+}
+
+.middle-box {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 100%; /* Fill the width */
+  height: 100vh; /* Fill the height of the viewport */
+  margin: auto; /* Center the box */
+}
