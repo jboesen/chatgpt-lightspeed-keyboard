@@ -1,12 +1,38 @@
-chrome.tabs.onUpdated.addListener((tabId, tab) => {
-    if (tab.url && tab.url.includes("youtube.com/watch")) {
-      const queryParameters = tab.url.split("?")[1];
-      const urlParameters = new URLSearchParams(queryParameters);
-  
-      chrome.tabs.sendMessage(tabId, {
-        type: "NEW",
-        videoId: urlParameters.get("v"),
-      });
-    }
+function handleInterrupt() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+
+    chrome.scripting.executeScript({
+      target: {tabId: tabs[0].id},
+      files: ["contentScript.js"]  
+    });
+
   });
+}
+
+function handleSwitchModel(url) {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
   
+    chrome.tabs.update(tabs[0].id, {url: url}); 
+
+  });
+}
+
+chrome.commands.onCommand.addListener(function(command) {
+
+  switch (command) {
+    case "switch3":
+      handleSwitchModel("https://chat.openai.com/?model=text-davinci-002-render-sha");
+      break;
+    case "switch4":
+      handleSwitchModel("https://chat.openai.com/?model=gpt-4");
+      break;
+    case "switchPlugins":
+      handleSwitchModel("https://chat.openai.com/?model=gpt-4-plugins");
+      break;
+    case "interrupt":
+      handleInterrupt();
+      break;
+    default:
+      break;
+  }
+});
