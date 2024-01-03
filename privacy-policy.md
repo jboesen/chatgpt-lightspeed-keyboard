@@ -17,7 +17,7 @@ No user data, browsing history, or other personal information leaves your browse
 
 No information is transmitted externally to any servers. Everything occurs entirely client-side within your browser.
 
-The extension is open-source so interested users can verify exactly what it does by reviewing the code on GitHub at (this link)[https://github.com/jboesen/chatgpt-lightspeed-keyboard] (i.e., this repository).
+The extension is open-source so interested users can verify exactly what it does by reviewing the code on GitHub at [this link](https://github.com/jboesen/chatgpt-lightspeed-keyboard) (i.e., this repository).
 
 ## Privacy Policy Changes
 
